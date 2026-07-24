@@ -18,4 +18,4 @@ if __name__ == "__main__":
 	janr = input("Izlayotgan filmingiz janri: ")
 	result = search_by_genre(cinema,janr)
 	for x in result:
-		print(f"{x['title']:14s} | {x['genre']:10s} | {x['price']:6d} so'm")
+		print(x)
