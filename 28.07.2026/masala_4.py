@@ -12,7 +12,7 @@ class employee:
 	def get_first_name(self):
 		return self.first_name
 
-	def get_first_name(self):
+	def get_last_name(self):
 		return self.last_name
 
 	def get_full_name(self):
@@ -25,10 +25,34 @@ class employee:
 		self.salary = s
 
 	def raise_salary(self,percent):
-		return (self.salary * percent //100) + self.salary
+		if self.salary == 0:
+			return "Oylik belgilanmagan"
+		else:
+			return (self.salary * abs(percent) //100) + self.salary
 
 	def get_annual_salary(self):
-		return salary * 12
+		return self.salary * 12
+
 
 if __name__ == "__main__":
+	os.system("clear")
+	res = []
+	id = int(input("Xodim id: "))
+	name = input("Nomi: ")
+	fam = input("Familiyasi: ")
+	sl = int(input("Oylik maoshi: "))
+	emp = employee(id,name,fam,sl)
 
+	print(f"\n\nId:             {emp.get_id()}")
+	print(f"First name:     {emp.get_first_name()}")
+	print(f"Last name:      {emp.get_last_name()}")
+	print(f"Salary:         {emp.get_salary()}")
+	print(f"Annual salary:  {emp.get_annual_salary()}")
+
+	sl = int(input("\n\nO'zgartirilgan oylik: "))
+	emp.set_salary(sl)
+
+	print(f"\n\nId:             {emp.get_id()}")
+	print(f"Full name:      {emp.get_full_name()}")
+	print(f"Salary:         {emp.get_salary()}")
+	print(f"Annual salary:  {emp.get_annual_salary()}")
