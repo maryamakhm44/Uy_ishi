@@ -36,7 +36,6 @@ class employee:
 
 if __name__ == "__main__":
 	os.system("clear")
-	res = []
 	id = int(input("Xodim id: "))
 	name = input("Nomi: ")
 	fam = input("Familiyasi: ")
