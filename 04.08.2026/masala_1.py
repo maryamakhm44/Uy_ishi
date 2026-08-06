@@ -41,5 +41,5 @@ if __name__ == "__main__":
 	manager.get_details()
 	developer.get_details()
 
-	print(f"\nBonus (manager):     ${manager.calculate_bonus()}")
-	print(f"Bonus (developer):   ${developer.calculate_bonus()}")
+	print(f"\nBonus (manager):     ${manager.calculate_bonus():.1f}")
+	print(f"Bonus (developer):   ${developer.calculate_bonus():.1f}")
